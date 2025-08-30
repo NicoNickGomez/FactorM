@@ -36,10 +36,10 @@ function loadComponent(placeholderId, filePath, callback) {
 }
 
 function loadHeaderAndFooter() {
-    loadComponent('header-placeholder', '/header.html', initNavigation);
-    loadComponent('footer-placeholder', '/footer.html');
+    const basePath = window.location.pathname.includes('/pages/') ? '../' : '';
+    loadComponent('header-placeholder', basePath + 'header.html', initNavigation);
+    loadComponent('footer-placeholder', basePath + 'footer.html');
 }
-
 
 function initNavigation() {
     const menuToggle = document.querySelector('.menu-toggle');
