@@ -36,7 +36,7 @@ function loadComponent(placeholderId, filePath, callback) {
 }
 
 function loadHeaderAndFooter() {
-    const basePath = window.location.pathname.includes('/pages') ? '../' : '';
+    const basePath = window.location.pathname.includes('') ? '../' : '';
     loadComponent('header-placeholder', basePath + 'header.html', initNavigation);
     loadComponent('footer-placeholder', basePath + 'footer.html');
 }
